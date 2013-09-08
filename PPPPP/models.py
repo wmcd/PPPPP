@@ -10,6 +10,7 @@ class Prize(models.Model):
 class Api(models.Model):
   sponsor = models.ForeignKey('Sponsor')
   url = models.URLField(max_length=200)
+  difficulty = models.IntegerField(default=0)
   def __unicode__(self):
     return self.url
 
